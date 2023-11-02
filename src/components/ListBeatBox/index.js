@@ -41,11 +41,6 @@ function ListBeatBox({ id, name, genre, price, view, like, onClick, handleLike, 
 
                 <div className={cx("footer")}>
                     <span className={cx("price")}>${price}</span>
-                    <div className={cx("number-sell")}>
-                        <span className={cx("box")}></span>
-                        <FontAwesomeIcon icon={faEye} />
-                        <span className={cx("number")}>{view}</span>
-                    </div>
                     <span className={cx("like")}>
                         <FontAwesomeIcon icon={faHeart} onClick={() => handleLike(id)} />
                         <span className={cx("number")}>{like}</span>

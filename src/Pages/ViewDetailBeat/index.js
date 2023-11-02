@@ -243,8 +243,8 @@ function ViewDetailBeat() {
 
                                     <div className={cx('information')}>
                                         {console.log(beatDetail)}
-                                        <h1><b>{beatDetail.beatName}</b></h1>
-                                        <Link to={`/viewdetailsmusician/${beatDetail.user.id}`}><h4> {beatDetail.user.fullName} &#x2022; 2023 </h4></Link>
+                                        <h1><b style={{color: 'white'}}>{beatDetail.beatName}</b></h1>
+                                        <Link to={`/viewdetailsmusician/${beatDetail.user.id}`}><h4 style={{fontWeight: 500, color: 'white', fontSize: '2.2rem'}}> {beatDetail.user.fullName} &#x2022; 2023 </h4></Link>
 
                                     </div>
                                     {/* <div className={cx('button-submit')}>
@@ -265,7 +265,7 @@ function ViewDetailBeat() {
                             </div>
 
                             <div className={cx('mid-detail-right')}>
-                                <h3><b>Musician information</b></h3>
+                                <h3><b style={{fontSize: '3rem'}}>Musician information</b></h3>
                                 <div className={cx('info-musician')}>
                                     <span style={{fontSize: '2rem'}} >&#x2022; Name: {beatDetail.user.fullName} </span>
                                     <span style={{fontSize: '2rem'}} >&#x2022; Contact: {beatDetail.user.mail}</span>
@@ -274,7 +274,7 @@ function ViewDetailBeat() {
                                     <span style={{fontSize: '2rem'}} >&#x2022; Number of beats: {listMusicianBeat.length} </span>
                                     <span style={{fontSize: '2rem'}} >&#x2022; Prize: {beatDetail.prize}</span>
                                 </div>
-                                <h3 style={{marginTop: 30}} ><b >Beat information</b></h3>
+                                <h3 style={{marginTop: 30, fontSize: '3rem'}} ><b >Beat information</b></h3>
                                 <div className={cx("container-like")}>
                                     <button className={cx("button")} onClick={() => handleLikeClick(beatDetail.id)}>
                                         <Heart id={checkLike ? cx('favorite-stroke') : cx('favorite-filled')} />
@@ -337,7 +337,7 @@ function ViewDetailBeat() {
                                     </div>
                                         : <div className={cx('mid-button')}>
                                             <Link to={"/login"}>
-                                                <Button variant="contained" className={cx('button-1')}>
+                                                <Button variant="contained" className={cx('button-1')} style={{borderRadius: 15, outline: '3px solid white', marginTop: 40}}>
                                                     <div>Add to cart</div>
                                                 </Button>
                                             </Link>
@@ -352,7 +352,7 @@ function ViewDetailBeat() {
 
                         <div className={cx('total-detail')}>
                             <div className={cx('title-detail')}>
-                                <span style={{fontSize: '3rem', fontWeight:'bold', display: 'flex', justifyContent: 'center', marginLeft: -70}}>Song List</span>
+                                <span style={{fontSize: '3rem', fontWeight:'bold', display: 'flex', justifyContent: 'center', marginLeft: -70}}>Beats List</span>
                             </div>
 
                             {listMusicianBeat.map((item, index) => {
@@ -361,17 +361,12 @@ function ViewDetailBeat() {
                                         <div className={cx('mid-detail-left-2')}>
                                             <div className={cx('container')}>
                                                 <img className={cx('image-1')} src={require("../../assets/images/Other/beat-trong-am-nhac-la-gi1.jpg")} />
-                                                <div className={cx('middle-image-2')}>
-                                                    <Button variant="contained" className={cx('button-3')} style={{ margin: '0 auto'}}>
-                                                        <div>Play</div>
-                                                    </Button>
-                                                </div>
                                             </div>
                                         </div>
                                         <div className={cx('mid-detail-right-2')}>
                                             <div className={cx('text-2')}>
-                                                <h4 className={cx("musician-beat")}><b><Link to={`/viewdetailbeat/${item.id}`}>{item.beatName}</Link></b></h4>
-                                                <span className={cx("musician-name")}>{item.user.fullName}</span>
+                                                <h4  className={cx("musician-beat")}><b><Link style={{color: 'white', fontSize: '2rem'}} to={`/viewdetailbeat/${item.id}`}>{item.beatName}</Link></b></h4>
+                                                <span className={cx("musician-name")} style={{fontSize: '1.8rem', color: '#FFFFFF90'}}>{item.user.fullName}</span>
                                             </div>
                                         </div>
                                     </div>)

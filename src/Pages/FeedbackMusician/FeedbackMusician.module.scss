@@ -78,13 +78,13 @@
     border-radius: 20px;
     width: 500px;
     padding: 30px;
-    height: 400px;
+    height: auto;
     filter: drop-shadow(0 0 0.5rem rgb(146, 143, 144));
 }
 
 //form info user
 .volt8A {
-    height: 1300px;
+    height: auto;
     width: 900px;
     padding-left: 20px;
     background-color: rgb(255, 255, 255);
@@ -99,6 +99,7 @@
     font-size: 30px;
     font-family: inter;
     font-weight: 500;
+    margin-left: -5px;
 }
 
 .profile-2 {
@@ -118,7 +119,6 @@
     border-bottom: 1px solid rgb(65, 65, 65);
     width: 700px;
     height: 1px;
-    margin-top: 30px;
     margin-left: -50px;
 }
 
@@ -130,7 +130,7 @@
     border-bottom: 1px solid rgb(65, 65, 65);
     width: 700px;
     height: 1px;
-    margin-top: 30px;
+
     margin-left: 70px;
 
 }
@@ -142,7 +142,6 @@
     border: none;
     border-bottom: 1px solid rgb(65, 65, 65);
     width: 700px;
-    margin-top: 30px;
     height: 1px;
     flex-shrink: 0;
 }
@@ -372,7 +371,6 @@
 .info-user {
     display: grid;
     justify-content: center;
-    margin-top: 30px;
     font-size: 2.5rem;
     font-family: 'Sono';
     font-weight: 400;

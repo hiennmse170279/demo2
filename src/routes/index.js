@@ -38,6 +38,7 @@ import UpdateProfile from "../Pages/UpdateProfile";
 import ReportUser from "../Pages/ReportUser";
 import ViewDetailsUserByAdmin from "../Pages/ViewDetailsUserByAdmin";
 import ListBeatSoldOut from "../Pages/ListBeatSoldOut";
+import Contact from "../Pages/Contact";
 const publicRoutes = [
   {
     path: "/",
@@ -200,6 +201,10 @@ const publicRoutes = [
   {
     path: "/ReportUser",
     component: ReportUser,
+  },
+  {
+    path: "/Contact",
+    component: Contact,
   },
 ];
 
