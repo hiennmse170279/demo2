@@ -86,6 +86,7 @@ function UploadSong() {
         }
         await axiosInstance.post("http://localhost:8080/api/v1/song/user", songInput)
             .then((res) => {
+                alert("Upload Successfully")
                 navigate("/songs")
             })
             .catch((error) => {

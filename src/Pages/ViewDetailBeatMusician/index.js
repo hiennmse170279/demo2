@@ -33,7 +33,7 @@ function ViewDetailBeatMusician() {
     useEffect(() => {
         loadDetailBeat()
 
-    }, [beatId])
+    }, [beatId, checkSell])
 
     useEffect(() => {
         loadSoundFull()
@@ -74,7 +74,7 @@ function ViewDetailBeatMusician() {
             })
     }
 
-    const unSellBeat = async () => {
+    const handleUnsell = async () => {
         await axiosInstance.delete(`http://localhost:8080/api/v1/beat/${beatId}`)
             .then((res) => {
                 setCheckSell(false)
@@ -82,6 +82,16 @@ function ViewDetailBeatMusician() {
             .catch((error) => {
                 console.log(error)
             })
+    }
+
+    const handleSell = async () => {
+        await axiosInstance.put(`http://localhost:8080/api/v1/beat/${beatId}`)
+        .then((res) => {
+            setCheckSell(true)
+        })
+        .catch((error) => {
+            console.log(error)
+        })
     }
 
     if (beatDetail !== null) {
@@ -199,13 +209,13 @@ function ViewDetailBeatMusician() {
                                         <span>&#x2022; Total Like: {(beatDetail.totalLike)}</span>
                                         {beatDetail.status === 1 ?
                                             <div style={{ textAlign: "center", marginTop: 20 }}>
-                                                <Button variant="contained" className={cx('button-1')} onClick={() => loadSoundFull()}>
+                                                <Button variant="contained" className={cx('button-1')} onClick={() => handleUnsell()}>
                                                     <div>UnSell</div>
                                                 </Button>
                                             </div>
                                             :
                                             <div style={{ textAlign: "center", marginTop: 20 }}>
-                                                <Button variant="contained" className={cx('button-1')} onClick={() => loadSoundFull()}>
+                                                <Button variant="contained" className={cx('button-1')} onClick={() => handleSell()}>
                                                     <div>Sell</div>
                                                 </Button>
                                             </div>

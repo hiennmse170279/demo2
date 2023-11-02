@@ -71,8 +71,9 @@ function UploadBeat() {
       },
     })
       .then((res) => {
+        alert("Upload Successfully")
         console.log(res.data)
-        navigate("/viewbeat");
+        navigate(`/viewdetailbeatmusician/${beatId}`);
       })
       .catch((error) => {
         console.log(error)

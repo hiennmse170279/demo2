@@ -24,7 +24,7 @@ function ListBeatPurchased() {
     const navigate = useNavigate()
     const { setListBeatContext, setDefaultCart, setViewBeatFirstTime, viewBeatFirstTime, checkOut } = useContext(ShopContext)
     const [search, setSearch] = useState("");
-    const [list, setList] = useState([]);
+    const [list, setList] = useState();
     const [listGenres, setListGenres] = useState(null);
     const [listMusicianName, setListMusicianName] = useState(null);
     const [page, setPage] = useState(1)
@@ -110,10 +110,11 @@ function ListBeatPurchased() {
     const loadBeats = async () => {
         if(!token){
             navigate("/login")
+            return
         }
-        console.log(`http://localhost:8080/api/v1/beat/user/${jwtDecode(token).sub}/1`)
         await axiosInstance.get(`http://localhost:8080/api/v1/beat/user/${jwtDecode(token).sub}/${page}`)
             .then(res => {
+                console.log(res.data.dtoList)
                 setList(res.data.dtoList)
                 setPages(res.data.max)
             })
@@ -164,7 +165,7 @@ function ListBeatPurchased() {
                     return <ListBeatBox key={index} name={item.name} type={item.type} price={item.price} member={item.member} play={play} setPlay={setPlay} />
                 })}
             </div> */}
-                {list.length !== 0 ?
+                {list?
                     <div>
                         <div className={cx("listbeat")}>
                             {list.map((item) => {

@@ -75,6 +75,7 @@ const handleUpload = async () => {
     })
       .then((res) => {
         console.log(res.data)
+        alert("Upload Successfully")
         navigate("/viewbeat");
       })
       .catch((error) => {
