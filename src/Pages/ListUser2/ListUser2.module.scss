@@ -1,0 +1,22 @@
+@import url('https://fonts.cdnfonts.com/css/sono');
+@import url('https://fonts.cdnfonts.com/css/inter');
+*{
+    font-family: Sono;
+}
+.header-text{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+    font-size: inter;
+    font-size: 6.5rem;
+    font-weight: 400;
+    margin-top: -120px;
+    margin-left: 60px;
+}
+.table{
+    margin-top: 200px;
+    padding: 30px;
+}
+.table-cell{
+    font-family: Sono;
+}

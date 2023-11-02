@@ -1,0 +1,114 @@
+.listofsong {
+    .text-header {
+      display: flex;
+      justify-content: center;
+    }
+  
+    .line {
+      width: 80%;
+      border-bottom: 2px solid #000;
+      margin-left: 200px;
+    }
+  
+    .option {
+      // Add your styles for .option here
+    }
+  
+    .container {
+      display: flex;
+      margin-left: 45%;
+      
+      input {
+        // ... your existing styles ...
+        transform: scale(2.5); /* Adjust the scale value to make the radio button bigger */
+        margin-bottom: 35px;
+      }
+  
+      .checkmark {
+        margin-left: 15px;
+        width: 35px; /* Adjust the width and height to make the checkmark circle bigger */
+      height: 35px;
+      }
+    }
+    .custom-radio{
+        size: 20px;
+    }
+  
+    .body {
+      display: flex;
+      height: auto;
+      padding: 50px 300px;
+      gap: 200px;
+    }
+  
+    .body-left {
+      flex: 3;
+      height: auto;
+      text-align: center;
+      background-color: lightgray;
+      border-radius: 10px;
+      position: sticky;
+    }
+  
+    .body-right {
+        flex: 7;
+        // Add a new container for the scrollable content
+        .scroll-container {
+            max-height: calc(100vh - 140px); /* Adjust as needed */
+            overflow-y: auto;
+            padding-right: 15px; /* Add padding to compensate for scrollbar width */
+            box-sizing: content-box;
+            &::-webkit-scrollbar { /* mất thanh */
+                width: 0;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: transparent; /* Make the thumb transparent */
+            }
+
+            &::-webkit-scrollbar-track {
+                background-color: transparent; /* Make the track transparent */
+            }
+        }
+    }
+  
+    .song {
+      display: flex;
+      border-radius: 10px;
+      text-align: center;
+      margin-bottom: 27px;
+      background-color: lightgray;
+      padding: 30px;
+    }
+  
+    .song-name {
+      margin-left: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    .option{
+        margin-top:  25px;
+    }
+    .song:hover{
+      
+        transition: 0.5s all ease-in-out;
+        transform: scale(1.1);
+        
+    }
+    .pagination{
+        justify-content: end;
+        align-items: end;
+        text-align: end;
+        margin-right: 50px;
+    }
+    .pagination span{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .pagination button svg {
+        padding-top: 5px;
+    }
+    // .text-body-left{
+    //     margin-top: 400px;
+    // }1
+  }

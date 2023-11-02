@@ -1,0 +1,240 @@
+.song-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-star {
+    margin-left: 10px;
+}
+
+.button {
+    background-color: #5c9bcb;
+
+    &:hover {
+        background-color: #a5f062;
+    }
+
+    cursor: pointer;
+}
+
+.text-button-bb-big {
+    color: #fff;
+    text-align: center;
+    text-transform: capitalize;
+}
+.text-button-bb-small {
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.button-author {
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.song-author {
+    display: flex;
+    justify-content: start;
+}
+
+.text-button-ballad {
+    text-transform: capitalize;
+    color: #fff;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.text-dashed-underline {
+    text-decoration: underline;
+    text-decoration-style: dashed;
+}
+
+.clearfix {
+    display: flex;
+    justify-content: start;
+    align-content: center;
+}
+
+.number-of-chords {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    background-color: #E6E6E6;
+    border-radius: 15px;
+}
+
+.music-tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    background-color: #E6E6E6;
+    border-radius: 15px;
+}
+
+.sign {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.cus-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.chord-basic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-style: italic;
+}
+
+.version-bar {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.tone {
+    display: flex;
+    justify-content: start;
+    border: 1px dashed #969696;
+    background-color: #fffce0;
+
+    padding: 10px;
+}
+
+.text-tone {
+    margin-right: 10px;
+}
+
+.pre-inline {
+    display: flex;
+    justify-content: space-between;
+}
+
+.song-lyric {
+    margin: 20px;
+
+}
+
+.song-lyric-sum {
+    box-shadow: 1px 1px 5px #E6E6E6 inset;
+}
+
+.lyric-item-left {
+    display: flex;
+    justify-content: start;
+}
+
+.lyric-left-right {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.chord-list-title {
+    display: flex;
+    justify-content: start;
+    background-color: #E6E6E6;
+    align-items: center;
+}
+
+.text-chord-list-title {
+    margin-left: 10px;
+
+}
+
+.inmage-chord {
+    display: flex;
+    justify-content: center;
+}
+
+.change-tone {
+    display: flex;
+    justify-content: center;
+}
+
+.chord-list {
+    margin: 20px;
+    border: #E6E6E6 solid 1px;
+}
+
+.comment {
+    margin-left: 25px;
+    margin-top: 30px;
+}
+
+.post-button {
+    display: flex;
+    justify-content: center;
+    margin-left: 600px;
+}
+
+.comment-all {
+    border: #E6E6E6 solid 1px;
+}
+
+.background-image {
+    width: 50px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.comment-item-username {
+    display: flex;
+    justify-content: start;
+}
+
+.times {
+    margin-left: 5px;
+}
+
+.show-comment-of-cus {
+    display: flex;
+    justify-content: start;
+}
+
+.show-comment-right {
+    margin-left: 15px;
+}
+
+.reply {
+    display: flex;
+    justify-content: start;
+    text-align: center;
+}
+
+.replay-title {
+    display: flex;
+    justify-content: center;
+}
+
+.icon-like {
+    margin-bottom: 10px;
+}
+
+// .eidt-delete{
+//     margin-bottom: 10px;
+
+// }
+.comment-username {
+    display: flex;
+    justify-content: center;
+}
+

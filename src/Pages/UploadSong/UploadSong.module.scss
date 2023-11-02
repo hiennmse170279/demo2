@@ -1,0 +1,200 @@
+@import url('https://fonts.cdnfonts.com/css/sono');
+*{
+    font-family: Sono;
+}
+*input {
+    padding: 10px;
+}
+
+.grid-9 {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.container-16 {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1850px;
+    overflow: hidden;
+}
+
+// .grid-10{
+//     display: flex;
+//     flex-direction: column;
+// }
+
+.input-song-name {
+    width: 300px;
+    line-height: 32px;
+    box-shadow: 1px 1px 5px #E6E6E6 inset;
+}
+
+.button {
+    background-color: #E6E6E6;
+    text-align: center;
+    cursor: pointer;
+}
+
+.button-icon {
+    margin-right: 5px;
+}
+
+.toolbox {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    line-height: 32px;
+    box-shadow: 1px 1px 5px #E6E6E6 inset;
+    padding: 20px;
+    
+
+}
+
+//All details of Song
+.song-genres{
+}
+.link-music{
+    margin-right: 470px;
+}
+
+.button-submit {
+    margin-left: 10px;
+
+    &:hover {
+        background-color: #fff;
+    }
+
+    background-color: #E6E6E6;
+}
+
+.pull-left {
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.pull-right {
+    margin-left: 200px;
+
+    &:hover {
+        background-color: #fff;
+    }
+
+    background-color: #E6E6E6;
+}
+
+.toolbox-bottom {
+    background-color: #E6E6E6;
+}
+
+.blue-header {
+    color: #5c9bcb;
+    padding: 5px;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    width: 80%;
+}
+
+.review-panel {
+    padding: 50px;
+    border: 2px dashed #ccc;
+    background-color: #fff;
+    line-height: 80px;
+}
+
+.grid-5-alpha {
+    display: flex;
+    justify-content: space-between;
+}
+
+.grid-3-alpha {
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-singer {
+    display: flex;
+    justify-content: start;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.text-add-singer {
+    color: #5c9bcb;
+
+    .text-add-singer>h2 {
+        font-size: 15px;
+    }
+}
+
+.icon-plus {
+    margin-top: 15px;
+    margin-right: 5px;
+}
+
+
+
+.white-box {
+    margin-left: 10rem;
+    margin: 10px 0;
+    background-color: #fff;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .15);
+}
+
+.white-box-final {
+    padding: 20px;
+    width: 500px;
+    margin-left: 130px;
+    position: fixed;
+    left: 1120px;
+    background: fixed;
+    border-radius: 20px;
+    background-color: rgb(247, 247, 247);
+    color:black;
+}
+
+.check-failed-pass {
+    display: flex;
+    justify-content: start;
+}
+
+.icon-times-left {
+    margin-right: 5px;
+    margin-top: 6px;
+}
+
+.text-failed {
+    text-align: start;
+}
+
+.textarea {
+    resize: none;
+    .textarea-box{
+        width: 50px;
+    }
+}
+.Add-Songs{
+    width: 100%;
+    border-top: 1px solid var(--gray-100, #e4e7e9);
+    display: flex;
+    padding: 24px;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 1200px;
+}
+.Add-Songs-body{
+    display: inline-block;
+      font-size: 1.4rem;
+      font-weight: 600;
+      letter-spacing: 0.168px;
+      text-transform: uppercase;
+      border-radius: 2px;
+      border: 2px solid var(--secondary-500, #2da5f3);
+      padding: 10px 24px;
+      color: #2da5f3;
+      user-select: none;
+}
+

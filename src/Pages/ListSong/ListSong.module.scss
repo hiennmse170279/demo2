@@ -1,0 +1,186 @@
+.container-content{
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f8fa;
+}
+
+.main-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.loaded-content{
+    margin: 50px;
+    width: 500px;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    // border-bottom: 2px solid #000;
+    // margin: 0px 300px 0px 300px;
+}
+
+.line{
+    width: 500px;
+    height: 2px;
+    background-color: #000;
+}
+
+.panel-title{
+    color: #5c9bcb;
+    padding: 5px;
+    font-size: 16px;
+    // margin: 20px 1600px 0px 0px;
+    text-transform: uppercase;
+    text-align: center;
+
+    
+}
+
+.register-login{
+    text-align: center;
+    // margin: 0px 1600px 0px 10px;
+    box-shadow: 0 2px 2px rgba(0,0,0,.2);
+    // background-color: rgb(188, 184, 184);
+    padding: 0px 50px ;
+    
+}
+
+.panel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.click-button{
+    // margin: 0px 1600px 0px 10px;
+    margin-top: 20px;
+}
+
+.icon{
+    margin-right: 5px;
+    display: flex;
+}
+
+.click-button{
+    display: flex;
+    text-align: center;
+    // margin: 10px 0px 0px 100px;
+}
+
+.rhythm-list{
+    // text-align: center;
+    // margin: 0px 1600px 0px 10px;
+    box-shadow: 0 2px 2px rgba(0,0,0,.2);
+    // background-color: rgb(188, 184, 184);
+    width: 100%;
+}
+
+.rhythm-item{
+    // text-align: center;
+    // margin: 5px 30px 0px 30px;
+    // border: 1px solid #000;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    transition: all 0.3 ease ;
+    &:hover{
+        transform: scale(1.05);
+        // background-color: rgba($color: #58beed, $alpha: 1.0);
+        background-color: rgb(231, 226, 226);
+    }
+    width: 100%;
+}
+
+.song-list{
+    // margin: 0px 1600px 0px 10px;
+    box-shadow: 0 2px 2px rgba(0,0,0,.2);
+    // background-color: rgb(188, 184, 184);
+}
+
+.song-list-small{
+    // margin-left: 10px;
+    
+}
+
+.song-info{
+    display: flex;
+    justify-content: space-between;
+    // margin-left: 10px;
+    box-shadow: 0 2px 2px rgba(0,0,0,.2);
+    
+}
+
+.song-vote{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-right: 5px;
+   
+}
+
+.hot-today{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 2px rgba(0,0,0,.2);
+    padding: 20px;
+}
+
+
+.hot-today-list{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    &:hover{
+        transform: scale(1.05);
+        // background-color: rgba($color: #58beed, $alpha: 1.0);
+        background-color: rgb(231, 226, 226);
+    }
+}
+
+.hot-today-view{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 10px;
+}
+
+.hot-today-song{
+    margin: 10px;
+    font-size: 5em;
+    
+}
+
+.hot-today-singers{
+    margin: 10px;
+    color: #58beed;
+}
+
+.emerging{
+    box-shadow: 0 2px 2px rgba(0,0,0,.2);
+    padding: 20px;
+}
+
+.song-infor{
+    display: flex;
+    justify-content: space-between;
+}
+
+.song-poster-date{
+    margin-right: 180px;
+}
+
+.icon-eye{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.b{
+    margin-right: 10px;
+}

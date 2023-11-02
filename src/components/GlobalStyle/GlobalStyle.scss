@@ -1,0 +1,41 @@
+@import "normalize.css";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+$gradient-colors:#ececec, #ececec, #ececec, #ececec, #ececec, #d8d8da, #c5c5c8, #b1b2b6, #85898f, #5b636a, #334045, #0d1f23;
+$gradient-direction: to right top;
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --global-BG: #f9f9f9;
+   //Background của các trang
+  // background-image: linear-gradient($gradient-direction, $gradient-colors);
+  --white: #fff;
+  --black: #000;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--global-BG);
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  &:hover{
+    background-color: transparent;
+    color:white
+  }
+}
+
+
+
