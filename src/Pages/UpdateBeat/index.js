@@ -301,10 +301,10 @@ function UploadBeat() {
           </div>
 
           <Button variant="contained" className={cx("input", "submit")} onClick={handleUpdate} >
-            <input
+            <input style={{borderRadius: 30}}
               type="submit"
               value="Update"
-              className={cx("input-text", "input-submit")}
+              className={cx("input-text-update", "input-submit")}
             />
           </Button>
         </div>

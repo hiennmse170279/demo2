@@ -103,7 +103,7 @@ function ChordsDetails() {
                     </div>
                     <div class="collection-box">
                         <h4>Key</h4>
-                        <select id="chord-collection-keys" class="chord-collection-select" onChange={handleKeyChange} defaultValue={key}>
+                        <select id="chord-collection-keys" style={{ height: 40, witdh: 150 }} class="chord-collection-select" onChange={handleKeyChange} defaultValue={key}>
                             {KEY.map((item, index) => {
                                 return <option key={index} value={item}>{item}</option>
                             })}
@@ -111,7 +111,7 @@ function ChordsDetails() {
                     </div>
                     <div class="collection-box">
                         <h4>Suffix</h4>
-                        <select id="chord-collection-suffixes" class="chord-collection-select" onChange={handleSuffixChange} defaultValue={suffix}>
+                        <select id="chord-collection-suffixes" style={{ height: 40, witdh: 150 }} class="chord-collection-select" onChange={handleSuffixChange} defaultValue={suffix}>
                             {SUFFIX.map((item, index) => {
                                 return <option key={index} value={item}>{item}</option>
                             })}
@@ -119,9 +119,9 @@ function ChordsDetails() {
                     </div>
                     <div class="collection-box">
                         <h4>Instrument</h4>
-                        <select id="chord-collection-suffixes" class="chord-collection-select" onChange={handleInstrumentChange} defaultValue={instrument}>
+                        <select id="chord-collection-suffixes" style={{ height: 40, witdh: 150 }} class="chord-collection-select" onChange={handleInstrumentChange} defaultValue={instrument}>
                             {INSTRUMENT.map((item, index) => {
-                                return <option key={index} value={item}>{item}</option>
+                                return <option style={{textTransform: 'uppercase', fontWeight: 500}} key={index} value={item}>{item}</option>
                             })}
                         </select>
                     </div>
@@ -160,13 +160,12 @@ function ChordsDetails() {
                 </div>
             </div>
 
-            <div className={cx("list-chords")} style={{}}>
+            <div className={cx("list-chords")} style={{ marginBottom: '300px' }}>
                 {listChord.map((item) => {
-                    return <div style={{display: "flex", flexDirection: "column", rowGap: "10px"}}>
-                        <img className={cx("detail-img")} style={{ width: 250, height: 260, objectFit: 'fill', marginLeft: 700 }} key={item.type} src={item.image} alt={item.chordName} />
+                    return <div style={{ display: "flex", flexDirection: "column", rowGap: "10px", }}>
+                        <img className={cx("detail-img")} style={{ width: 250, height: 280, objectFit: 'fill', marginLeft: 400 }} key={item.type} src={item.image} alt={item.chordName} />
                         <p className={cx("img__description")}>{item.chordName} {item.description}<p style={{ marginTop: 35 }}>{item.type}</p></p>
-
-                        </div>
+                    </div>
                 })}
             </div>
         </div>

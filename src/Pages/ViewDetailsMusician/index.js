@@ -62,7 +62,7 @@ function MyProfile() {
                 if (res.data.username !== null) {
                     setUserName(res.data.username)
                 }
-                if(res.data.address !== null){
+                if (res.data.address !== null) {
                     setAddress(res.data.address)
                 }
                 if (res.data.mail !== null) {
@@ -111,6 +111,25 @@ function MyProfile() {
                 </h2>
             </div>
             <div className={cx("profile")}>
+                <div className={cx("img-user-div")}>
+                    <div className={cx("img-user-div1")}>
+                        <div className={cx("img-user-div2")}>
+                            <div className={cx("img-user-div3")}>
+                                {avatar !== "" ?
+                                    <img className={cx("box-img")} alt="" src={avatar} />
+                                    : <img className={cx("box-img")} alt="" src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVhcVcxgW8LzmIu36MCeJb81AHXlI8CwikrHNh5vzY8A&s"} />}
+                            </div>
+                            <div className={cx("info-user")}>
+                                <td style={{ fontSize: 30, display: 'flex', justifyContent: 'center' }}>
+                                    {username}
+                                </td>
+                                <td style={{ fontSize: 20, display: 'flex', justifyContent: 'center' }}>
+                                    Musician
+                                </td>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <Tabs style={{ marginTop: -50 }}>
                     <TabList>
                         <Tab >Profile</Tab>
@@ -171,7 +190,7 @@ function MyProfile() {
                                         </div>
                                     </div>
 
-                                    <div style={{ marginLeft: 70, marginTop: 50, fontSize: 20, fontWeight: "bolder" }}>*More Information</div>
+                                    <div style={{ marginLeft: 70, marginTop: 50, fontSize: 18, fontWeight: "bolder" }}>*More Information</div>
                                     <div className={cx("part3")}>
                                         <td className={cx("phone-number")}>
                                             Prize
@@ -209,22 +228,22 @@ function MyProfile() {
 
                                 <form style={{ marginTop: 20 }}>
                                     {feedBacks.map((feedback) => {
-                                        return(
-                                        <table className={classNames("profile-2")}>
-                                            <div className={cx("part0")}>
-                                                <td>
-                                                    <div className={cx("text-username0")}>
-                                                        <td>
-                                                            <label style={{ fontFamily: 'sono', fontWeight: 400, marginLeft: -2 }} className={cx("login-text")}>{feedback.beat.beatName}</label>
-                                                            <label style={{ marginLeft: 20, fontFamily: 'Sono', fontWeight: 400 }} className={cx("login-text")}>{feedback.user.fullName}</label>
-                                                        </td>
-                                                        <div>
-                                                            <input className={cx("input-username0")} type="text" placeholder value={feedback.content} readOnly />
+                                        return (
+                                            <table className={classNames("profile-2")}>
+                                                <div className={cx("part0")}>
+                                                    <td>
+                                                        <div className={cx("text-username0")}>
+                                                            <td>
+                                                                <label style={{ fontFamily: 'sono', fontWeight: 400, marginLeft: -2 }} className={cx("login-text")}>{feedback.beat.beatName}</label>
+                                                                <label style={{ marginLeft: 20, fontFamily: 'Sono', fontWeight: 400 }} className={cx("login-text")}>{feedback.user.fullName}</label>
+                                                            </td>
+                                                            <div>
+                                                                <input className={cx("input-username0")} type="text" placeholder value={feedback.content} readOnly />
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </td>
-                                            </div>
-                                        </table>)
+                                                    </td>
+                                                </div>
+                                            </table>)
                                     })}
                                     <div className={cx("pagination")}>
                                         <Pagination pages={pages} page={page} setPage={setPage} />
@@ -235,26 +254,6 @@ function MyProfile() {
 
                     </TabPanel>
                 </Tabs>
-                <div className={cx("line")} />
-                <div className={cx("img-user-div")}>
-                    <div className={cx("img-user-div1")}>
-                        <div className={cx("img-user-div2")}>
-                            <div className={cx("img-user-div3")}>
-                                {avatar !== "" ?
-                                    <img className={cx("box-img")} alt="" src={avatar} />
-                                    : <img className={cx("box-img")} alt="" src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVhcVcxgW8LzmIu36MCeJb81AHXlI8CwikrHNh5vzY8A&s"} />}
-                            </div>
-                            <div className={cx("info-user")}>
-                                <td>
-                                    {username}
-                                </td>
-                                <td style={{ fontSize: 20 }}>
-                                    Musician
-                                </td>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     );

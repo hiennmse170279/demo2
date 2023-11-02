@@ -88,10 +88,10 @@ function ViewDetailsUserByAdmin() {
                                             <td>
                                                 <div className={cx("text-username0")}>
                                                     <td >
-                                                        <label className={cx("login-text")}>Full Name</label>
+                                                        <label style={{fontWeight: 500}} className={cx("login-text")}>Full Name</label>
                                                     </td>
                                                     <div>
-                                                        <input className={cx("input-username0")} type="text" value={user.fullName} placeholder readOnly />
+                                                        <input  className={cx("input-username0")} type="text" value={user.fullName} placeholder readOnly />
                                                     </div>
                                                 </div>
                                             </td>
@@ -99,7 +99,7 @@ function ViewDetailsUserByAdmin() {
                                         <div className={cx("part1")}>
                                             <td className={cx("")}>
                                                 <td>
-                                                    <label className={cx("text-name")}>Address</label>
+                                                    <label style={{fontWeight: 500}} className={cx("text-name")}>Address</label>
                                                 </td>
                                                 <div className={cx("placeholder-ten")}>
                                                     <input className={cx("input-username")} type="text" placeholder value={user.address} readOnly />
@@ -108,7 +108,7 @@ function ViewDetailsUserByAdmin() {
                                         </div>
                                         <div className={cx("part2")}>
                                             <td>
-                                                <div className={cx("email-text")}>
+                                                <div style={{fontWeight: 500}} className={cx("email-text")}>
                                                     Email:
                                                 </div>
                                                 <div className={cx("email-change")}>
@@ -118,7 +118,7 @@ function ViewDetailsUserByAdmin() {
 
                                         </div>
                                         <div className={cx("part3")}>
-                                            <td className={cx("phone-number")}>
+                                            <td style={{fontWeight: 500}} className={cx("phone-number")}>
                                                 Phone number
                                             </td>
                                             <div className={cx("placeholder-ten")}>
@@ -173,7 +173,7 @@ function ViewDetailsUserByAdmin() {
                                             <td>
                                                 <div className={cx("text-username0")}>
                                                     <td>
-                                                        <label style={{ fontFamily: 'Sono', fontWeight: 400 }} className={cx("login-text")}>Vo Quoc Doanh</label>
+                                                        <label style={{ fontFamily: 'Sono', fontWeight: 500 }} className={cx("login-text")}>Vo Quoc Doanh</label>
                                                     </td>
                                                     <div>
                                                         <input className={cx("input-username0")} type="text" placeholder value="Beat hay qua" onChange={handleSearch} />
@@ -217,11 +217,11 @@ function ViewDetailsUserByAdmin() {
                                 </div>
                                 {/* <input className={cx("img-click")} type="file" accept=".jpg,.jpeg,.png" /> */}
                                 <div className={cx("info-user")}>
-                                    <td>
+                                    <td style={{fontWeight: 500}}>
                                         {user.username}
                                     </td>
                                     {user.role === "MS" ?
-                                        <td style={{ marginLeft: 10 }}>
+                                        <td style={{ marginLeft: 10, fontWeight: 300 }}>
                                             Musician
                                         </td> : <td style={{ marginLeft: 10 }}>
                                             Customer

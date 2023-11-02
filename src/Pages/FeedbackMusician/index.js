@@ -70,7 +70,7 @@ function FeedbackMusician() {
                                         <td>
                                             <div className={cx("text-username0")}>
                                                 <td >
-                                                    <label className={cx("login-text")}>Full Name</label>
+                                                    <label style={{ fontWeight: 500 }} className={cx("login-text")}>Full Name</label>
                                                 </td>
                                                 <div>
                                                     <input className={cx("input-username0")} type="text" placeholder value="Vo Quoc Doanh" onChange={handleSearch} />
@@ -81,7 +81,7 @@ function FeedbackMusician() {
                                     <div className={cx("part1")}>
                                         <td className={cx("")}>
                                             <td>
-                                                <label className={cx("text-name")}>Address</label>
+                                                <label style={{ fontWeight: 500 }} className={cx("text-name")}>Address</label>
                                             </td>
                                             <div className={cx("placeholder-ten")}>
                                                 <input className={cx("input-username")} type="text" placeholder value="Thanh pho Ho Chi Minh" onChange={handleSearch1} />
@@ -90,7 +90,7 @@ function FeedbackMusician() {
                                     </div>
                                     <div className={cx("part2")}>
                                         <td>
-                                            <div className={cx("email-text")}>
+                                            <div style={{ fontWeight: 500 }} className={cx("email-text")}>
                                                 Email:
                                             </div>
                                             <div className={cx("email-change")}>
@@ -101,7 +101,7 @@ function FeedbackMusician() {
 
                                     </div>
                                     <div className={cx("part3")}>
-                                        <td className={cx("phone-number")}>
+                                        <td style={{ fontWeight: 500 }} className={cx("phone-number")}>
                                             Phone number
                                         </td>
                                         <div className={cx("placeholder-ten")}>
@@ -109,7 +109,7 @@ function FeedbackMusician() {
                                         </div>
                                     </div>
                                     <div className={cx("part3")}>
-                                        <td className={cx("phone-number")}>
+                                        <td style={{ fontWeight: 500 }} className={cx("phone-number")}>
                                             Genre
                                         </td>
                                         <div className={cx("placeholder-ten")}>
@@ -117,7 +117,7 @@ function FeedbackMusician() {
                                         </div>
                                     </div>
                                     <div className={cx("part3")}>
-                                        <td className={cx("phone-number")}>
+                                        <td style={{ fontWeight: 500 }} className={cx("phone-number")}>
                                             Year of operation
                                         </td>
                                         <div className={cx("placeholder-ten")}>
@@ -125,7 +125,7 @@ function FeedbackMusician() {
                                         </div>
                                     </div>
                                     <div className={cx("part3")}>
-                                        <td className={cx("phone-number")}>
+                                        <td style={{ fontWeight: 500 }} className={cx("phone-number")}>
                                             Prize
                                         </td>
                                         <div className={cx("placeholder-ten")}>
@@ -133,7 +133,7 @@ function FeedbackMusician() {
                                         </div>
                                     </div>
                                     <div className={cx("part3")}>
-                                        <td className={cx("phone-number")}>
+                                        <td style={{ fontWeight: 500 }} className={cx("phone-number")}>
                                             Sex
                                         </td>
                                         <div className={cx("placeholder-ten")}>
@@ -147,16 +147,16 @@ function FeedbackMusician() {
                     {/* Feedback */}
                     <TabPanel>
                         <div className={cx("volt8A")}>
-                            <div style={{color: '#06c', fontWeight: 'bold'}} className={cx("title-feedback")}> Beat Review</div>
-                            <div style={{fontSize: 18, fontWeight: 500, marginLeft: 70, marginTop: 20}} className={cx("title-feedback")}> Beat Review</div>
+                            <div style={{ color: '#06c', fontWeight: 'bold' }} className={cx("title-feedback")}> Beat Review</div>
+                            <div style={{ fontSize: 18, fontWeight: 500, marginLeft: 67, marginTop: 20 }} className={cx("title-feedback")}> Beat Name</div>
                             <form style={{ marginTop: 20 }}>
                                 <table className={classNames("profile-2")}>
                                     <div className={cx("part0")}>
                                         <td>
                                             <div className={cx("text-username0")}>
                                                 <td>
-                                                    <label style={{ fontFamily: 'sono', fontWeight: 400, marginLeft: -2}}className={cx("login-text")}>Dont coi</label>
-                                                    <label style={{ marginLeft: 20, fontFamily: 'Sono', fontWeight: 400 }} className={cx("login-text")}>Vo Quoc Doanh</label>
+                                                    <label style={{fontFamily: 'Sono', fontWeight: 400, marginLeft: -3 }} className={cx("login-text")}>Vo Quoc Doanh</label>
+                                                    <label style={{ fontFamily: 'sono', fontWeight: 400, marginLeft: 20 }} className={cx("login-text")}>Dont coi</label>
                                                 </td>
                                                 <div>
                                                     <input className={cx("input-username0")} type="text" placeholder value="Beat hay qua" onChange={handleSearch} />

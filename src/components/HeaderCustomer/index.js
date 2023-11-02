@@ -57,7 +57,7 @@ function HeaderCustomer() {
         <Link to="/myprofile"><div className={cx("nav-item")}>User</div></Link>
           <div>
             <Popup trigger={<button className={cx("button-page")}>Pages</button>} position="bottom centers" closeOnDocumentClick on={['hover', 'focus']}>
-              <div className={cx("text-all")}>
+              <div className={cx("text-all-page")}>
                 <Link to="/listbeat"><div className={cx("link-text")}>Beat</div></Link>
                 <Link to="/chordsdetails"><div className={cx("link-text")}>Chords</div></Link>
                 <Link to="/songs"><div className={cx("link-text")}> Songs</div></Link>

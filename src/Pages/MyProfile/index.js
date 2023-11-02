@@ -234,11 +234,11 @@ function MyProfile() {
                                 <td>
                                     {username}
                                 </td>
-                                <td style={{fontSize:20}}>
+                                <td style={{fontSize:20, display: 'flex', justifyContent: 'center'}}>
                                     Customer
                                 </td>
                             </div>
-                            <input className={cx("img-click")} style={{ marginLeft: -30 }} type="file" accept=".jpg,.jpeg,.png" onChange={(e) => setUserImg(e.target.files[0])} />
+                            <input className={cx("img-click")} style={{ marginLeft: 100 }} type="file" accept=".jpg,.jpeg,.png" onChange={(e) => setUserImg(e.target.files[0])} />
                         </div>
                     </div>
                 </div>

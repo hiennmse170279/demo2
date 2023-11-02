@@ -1,4 +1,5 @@
 @import url('https://fonts.cdnfonts.com/css/sono');
+@import url('https://fonts.cdnfonts.com/css/inter');
 
 .first-container {
     margin-top: 50px;
@@ -279,6 +280,8 @@
     flex-direction: column;
     font-size: 2rem;
     row-gap: 10px;
+    font-weight: 400;
+    font-family: Inter;
 }
 
 .mid-detail-left-2 {
@@ -315,8 +318,11 @@
     justify-content: center;
 
     .musician-beat:hover {
-        color: #0066cc;
+        color: #f8f8f8;
     }
+}
+.musician-beat{
+    color: white;
 }
 .musician-name{
     font-size: 2.3rem;
@@ -685,4 +691,6 @@
 //comment
 .text-2 {
     margin-top: 30px;
+    margin-left: 60px;
+    line-height: 1.5;
 }

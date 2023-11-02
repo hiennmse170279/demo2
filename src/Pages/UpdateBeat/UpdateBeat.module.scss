@@ -1,7 +1,9 @@
 @import url('https://fonts.cdnfonts.com/css/sono');
-*{
+
+* {
   font-family: Sono;
 }
+
 .main {
   top: 0;
   left: 0;
@@ -13,102 +15,140 @@
 }
 
 .login-wrapper {
-    padding: 150px 254px;
-    text-align: center;
+
+  padding: 150px 254px;
+  text-align: center;
+  color: var(--white);
+  margin-top: 10px;
+  height: auto;
+  outline: 3px solid #fff;
+  margin-top: 50px;
+  border-radius: 30px;
+  margin-top: 150px;
+  margin-bottom: 270px;
+  width: 50%;
+  margin-left: 450px;
+  background-image: url('../../assets/images/LoginImg/pexels-jakub-novacek-924824.jpg');
+  object-fit: cover;
+
+
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+  .title {
+    font-size: 2.5rem;
+    font-weight: 200;
+  }
+
+  .link {
+    color: #fff;
+  }
+
+  .title-link {
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #fff;
+  }
+}
+
+.form-heading {
+  font-weight: 500;
+  color: white;
+}
+
+.form {
+  margin-top: 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 39px;
+
+  .input {
+    width: 380px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    outline: 3px solid white;
+    padding-left: 22px;
+    background-color: #06c;
+    border-radius: 40px;
+  }
+}
+
+.input-text {
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 14px 20px 14px 0;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.6;
+  background-color: #0066cc;
+  color: white;
+  border-radius: 30px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  padding-left: 15px;
+
+  &::placeholder {
     color: var(--white);
   }
-  
-  .heading {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-  
-    .title {
-      font-size: 2.5rem;
-      font-weight: 200;
-    }
-  
-    .link {
-      color: #fff;
-    }
-  
-    .title-link {
-      font-size: 2.5rem;
-      font-weight: 700;
-      padding-bottom: 3px;
-      border-bottom: 1px solid #fff;
-    }
-  }
-.form-heading{
-  font-weight: 500;
 }
-  .form {
-    margin-top: 56px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 39px;
-  
-    .input {
-      width: 380px;
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      outline: 3px solid white;
-      padding-left: 22px;
-      border-radius: 40px;
-    }
+.input-text-update{
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 14px 20px 14px 0;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.6;
+  background-color: #0066cc;
+  color: white;
+
+  &::placeholder {
+    color: var(--white);
   }
-  
-  .input-text {
-    outline: none;
-    border: none;
-    padding: 14px 0;
-    font-size: 1.6rem;
-    font-weight: 400;
-    line-height: 1.6;
-    background-color: inherit;
+}
+
+.submit {
+  border: 2px solid #e5e5e5;
+  background: #06c;
+  border-radius: 10px;
+  padding-left: 0 !important;
+
+  .input-submit {
+    margin: 0 auto;
     color: white;
-  
-    &::placeholder {
-      color: var(--white);
-    }
+    font-family: Poppins;
   }
-  
-  .submit {
-    border: 2px solid #e5e5e5;
-    background: #06c;
-    padding-left: 0 !important;
-  
-    .input-submit {
-      margin: 0 auto;
-      color: white;
-      font-family: Poppins;
-    }
-  }
-  
-  // Footer
-  .footer {
-    margin-top: 42px;
+}
+
+// Footer
+.footer {
+  margin-top: 42px;
+  display: inline-flex;
+  align-content: center;
+  gap: 255px;
+
+  .footer-left {
     display: inline-flex;
-    align-content: center;
-    gap: 255px;
-  
-    .footer-left {
-      display: inline-flex;
-      align-items: center;
-      gap: 11px;
-  
-      .input-check {
-        width: 23px;
-        height: 23px;
-      }
-    }
-  
-    .text {
-      font-size: 2.5rem;
-      font-weight: 400;
-      user-select: none;
+    align-items: center;
+    gap: 11px;
+
+    .input-check {
+      width: 23px;
+      height: 23px;
     }
   }
+
+  .text {
+    font-size: 2.5rem;
+    font-weight: 400;
+    user-select: none;
+  }
+}
