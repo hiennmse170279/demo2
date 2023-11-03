@@ -43,6 +43,7 @@ import MyCollection from "../Pages/MyCollection";
 import MyPlayListChordDetail from "@/Pages/MyPlaylistChordetail";
 import MyPLayListDetail from "@/Pages/MyPlaylistSongDetail";
 import SongDetail from "@/Pages/SongDetails";
+import ListAllUserBan from "../Pages/listAllUserBan";
 const publicRoutes = [
   {
     path: "/",
@@ -71,6 +72,10 @@ const publicRoutes = [
   {
     path: "/listuser",
     component: ListUser,
+  },
+  {
+    path: "/listAllUserBan",
+    component: ListAllUserBan,
   },
   {
     path: "uploadfile",

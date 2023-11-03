@@ -6,9 +6,32 @@ function ShopContextProvider({ children }) {
   const [viewBeatFirstTime, setViewBeatFirstTime] = useState(0);
   const [countCart, setCountCart] = useState(0);
 
-  const getDefaultCart = () => {
-    if (!listBeatContext) {
-      return;
+
+function ShopContextProvider({children}) {
+    const [listBeatContext, setListBeatContext] = useState([]);
+    const [viewBeatFirstTime, setViewBeatFirstTime] = useState(0);
+    const [countCart, setCountCart] = useState(0);
+    const getDefaultCart = () => {
+        console.log(listBeatContext)
+        if(!listBeatContext){
+            return;
+        }
+        console.log(123)
+        let cart = {};
+        // for(let i = 1; i < listBeat.length + 1; i++){
+        //     cart[i] = 0;
+        // }
+        for(let i = 1; i < listBeatContext.length + 1; i++){
+        listBeatContext.forEach(beat => {
+            cart[beat.id] = 0
+        })};
+        return cart;
+    };
+    
+    const [cartItems, setCartItems] = useState(getDefaultCart()); 
+
+    const setDefaultCart = () => {
+        setCartItems(getDefaultCart());
     }
     let cart = {};
     // for(let i = 1; i < listBeat.length + 1; i++){

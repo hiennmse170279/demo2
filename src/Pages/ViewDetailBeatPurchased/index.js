@@ -23,8 +23,9 @@ function ViewDetailBeatPurchased() {
     const token = useToken();
     const navigate = useNavigate();
     const [beatSoundFull, setBeatSoundFull] = useState("")
-    const [checkFeedBack, setCheckFeedBack] = useState("")
-    const [feedBack, setFeedBack] = useState("")
+    const [checkFeedBack, setCheckFeedBack] = useState(false)
+    const [feedBack, setFeedBack] = useState()
+    const [idFeedback, setIdFeedback] = useState("")
     const contentStyle = { background: 'white', width: 460, height: 370, borderRadius: 20 };
     let userId = ""
     if (token) {
@@ -37,8 +38,15 @@ function ViewDetailBeatPurchased() {
     }, [beatId])
 
     useEffect(() => {
+
+    })
+    useEffect(() => {
         loadSoundFull()
     }, [])
+
+    useEffect(() => {
+        loadFeedback()
+    },[checkFeedBack])
 
     const loadSoundFull = async () => {
         await axiosInstance(`http://localhost:8080/api/v1/beat/user/full/${beatId}`)
@@ -51,7 +59,10 @@ function ViewDetailBeatPurchased() {
     }
 
     const loadDetailBeat = async () => {
-
+        if(!token){
+            navigate("/login")
+            return
+        }
         await axiosInstance.get(`http://localhost:8080/api/v1/beat/${beatId}`)
             .then((res) => {
                 setBeatDetail(res.data)
@@ -64,16 +75,39 @@ function ViewDetailBeatPurchased() {
     const handleFeedback = async() => {
         await axiosInstance.post("http://localhost:8080/api/v1/beat/feedback",{userId: userId, beatId: beatId, content: feedBack})
         .then((res) =>{
-            setCheckFeedBack("FeedbackSuccessfully")
+            alert("Feedback Successfully")
+            setCheckFeedBack(true)
         })
         .catch((error) =>{
             console.log(error)
-            setCheckFeedBack("You have already feedbacked this beat")
         })
     }
 
-    
+    // const handleUpdateFeedback = async() => {
+    //     await axiosInstance.put("http://localhost:8080/api/v1/beat/feedback", {id:})
+    // }
 
+    const loadFeedback = async() => {
+        if(!token){
+            navigate("/login")
+            return
+        }
+        await axiosInstance.get(`http://localhost:8080/api/v1/beat/feedback/user/${userId}/${beatId}`)
+        .then((res) => {
+            if(res.data){
+                setCheckFeedBack(true)
+                console.log(res.data.content)
+                // setIdFeedback(res.data.)
+            }
+            else{
+                setCheckFeedBack(false)
+            }
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+    }
+   
     if (beatDetail !== null) {
         const dateReleasing = new Date(beatDetail.creatAt)
         const month = dateReleasing.getUTCMonth() + 1
@@ -184,6 +218,7 @@ function ViewDetailBeatPurchased() {
                                         <span>&#x2022; Total Rating: {(beatDetail.totalRating)}</span>
                                         <span>&#x2022; Release date: {day}/{month}/{year}</span>
                                         <div style={{ textAlign: "center", marginTop: 20 }}>
+                                            {!checkFeedBack ?
                                             <Popup className={cx("part-5")} style={{ width: "120%" }} trigger={<Button variant="contained" className={cx('button-1')}>
                                                 <div>Feedback</div>
                                             </Button>}  {...{ contentStyle }} position="bottom left center">
@@ -198,10 +233,25 @@ function ViewDetailBeatPurchased() {
                                                     </td>
                                                 </div>
                                             </Popup>
+                                            :
+                                            <Popup className={cx("part-5")} style={{ width: "120%" }} trigger={<Button variant="contained" className={cx('button-1')}>
+                                                <div>Update Feedback</div>
+                                            </Button>}  {...{ contentStyle }} position="bottom left center">
+                                                <div className={cx("text-all")} style={{ padding: 10 }}>
+                                                    <div style={{ display: 'grid' }}>
+                                                        <td style={{ fontWeight: 'bold', fontSize: "2.2rem", marginLeft: 80, color: 'red' }}>Feedback Information</td>
+                                                        
+                                                    </div>
+                                                    <textarea className={cx("text-des")} value={feedBack} style={{ resize: 'none', width: '385px', border: 1, height: 150, marginLeft: 24, marginTop: 20, marginBottom: 20, padding: 20, outline: '1px solid #E5E4E4', borderRadius: 12 }} onChange={ (e) => setFeedBack(e.target.value)}/>
+                                                    <td className={cx("button-type")}>
+                                                        <button type="button" className={cx("button-send")} aria-disabled="false" onClick={() => handleFeedback()} >Send</button>
+                                                    </td>
+                                                </div>
+                                            </Popup>
+                                            }
 
                                         </div>
                                         <div>
-                                            {checkFeedBack}
                                         </div>
                                     </div>
                                 </div>
