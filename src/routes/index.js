@@ -39,6 +39,10 @@ import ReportUser from "../Pages/ReportUser";
 import ViewDetailsUserByAdmin from "../Pages/ViewDetailsUserByAdmin";
 import ListBeatSoldOut from "../Pages/ListBeatSoldOut";
 import Contact from "../Pages/Contact";
+import MyCollection from "../Pages/MyCollection";
+import MyPlayListChordDetail from "@/Pages/MyPlaylistChordetail";
+import MyPLayListDetail from "@/Pages/MyPlaylistSongDetail";
+import SongDetail from "@/Pages/SongDetails";
 const publicRoutes = [
   {
     path: "/",
@@ -100,12 +104,12 @@ const publicRoutes = [
   {
     path: "/listbeat2",
     component: ListBeat2,
-  }
-  , {
+  },
+  {
     path: "/chordsdetails",
     component: ChordsDetails,
-  }
-  , {
+  },
+  {
     path: "/songs",
     component: Songs,
   },
@@ -141,11 +145,11 @@ const publicRoutes = [
     path: "/myprofile",
     component: MyProfile,
   },
-  
+
   {
     path: "/registeractivation",
     component: RegisterActivation,
-  },  
+  },
   {
     path: "/listbeatpurchased",
     component: ListBeatPurchased,
@@ -205,6 +209,27 @@ const publicRoutes = [
   {
     path: "/Contact",
     component: Contact,
+  },
+  //////////////////////
+  {
+    path: "/MyCollection",
+    component: MyCollection,
+    // customLayout: true,
+  },
+  {
+    path: "/my-playlist-chord/:id",
+    component: MyPlayListChordDetail,
+    // customLayout: true,
+  },
+  {
+    path: "/my-playlist-song/:playListName",
+    component: MyPLayListDetail,
+    // customLayout: true,
+  },
+  {
+    path: "/song/:id",
+    component: SongDetail,
+    // customLayout: true,
   },
 ];
 

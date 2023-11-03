@@ -63,15 +63,7 @@
 .footer-contact{
     margin-left: 50px;
     margin-bottom: 50px;
-}
-.contact-item1{
-    text-decoration-line:underline;
-}
-.img-footer{
-    width: 120px;
-    height: auto;
-}
-p{
+    p{
     width: 500px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -82,4 +74,12 @@ p{
     -webkit-box-orient: vertical;
     font-family: Roboto;
     font-size: 20px;
+}
+}
+.contact-item1{
+    text-decoration-line:underline;
+}
+.img-footer{
+    width: 120px;
+    height: auto;
 }

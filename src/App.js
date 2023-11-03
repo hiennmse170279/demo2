@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { publicRoutes } from "./routes";
 import DefaultLayout from "./components/DefaultLayout/DefaultLayout";
+import CustomLayout from "./components/CustomLayout";
 import ShopContextProvider from "./context/shop-context";
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
         <div className="App">
           <Routes>
             {publicRoutes.map((route, index) => {
-              const Layout = DefaultLayout;
+              const Layout = route.customLayout ? CustomLayout : DefaultLayout;
               const Page = route.component;
               return (
                 <Route
