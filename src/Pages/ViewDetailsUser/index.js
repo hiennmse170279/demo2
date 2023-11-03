@@ -1,13 +1,15 @@
 
 import classNames from "classnames/bind";
 import styles from "./ViewDetailsUser.module.scss";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { faChevronLeft, faChevronRight, faPause, faPlay, faPlayCircle, faRedo, faStepBackward, faStepForward } from "@fortawesome/free-solid-svg-icons";
 import { Button } from "bootstrap";
 import { red } from "@mui/material/colors";
 import Popup from "reactjs-popup";
 import axiosInstance from "../../authorization/axiosInstance";
+import useToken from "../../authorization/useToken";
+import jwtDecode from "jwt-decode";
 const cx = classNames.bind(styles);
 const DATA = [
     {
@@ -20,6 +22,14 @@ function ViewDetailsUser() {
     const [search, setSearch] = useState("");
     const [ten, setTen] = useState("");
     const [user, setUser] = useState();
+    const [report, setReport] = useState("")
+    const [checkReport, setCheckReport] = useState("")
+    const navigate = useNavigate()
+    const token = useToken()
+    let userId = ""
+    if(token){
+        userId = jwtDecode(token).sub
+    }
     const contentStyle = { background: 'white', width: 460, height: 370, borderRadius: 20 };
 
     useEffect(() => {
@@ -30,6 +40,16 @@ function ViewDetailsUser() {
     }
     const handleSearch1 = (e) => {
         setTen(e.target.value);
+    }
+    const handleReport = async() => {
+        if(!token){
+            navigate("/login")
+            return
+        }
+        await axiosInstance("http://localhost:8080/api/v1/report/user",{userId:userId, userReported: id, content: report})
+        .then((res) => {
+            setCheckReport("Report Successfully")
+        })
     }
 
     const loadDetailsUser = async () => {
@@ -107,13 +127,15 @@ function ViewDetailsUser() {
                                                     <a href="#" style={{ fontWeight: 'bold' }}>{user.username}</a>
                                                 </td>
                                             </div>
-                                            <textarea className={cx("text-des")} style={{ resize: 'none', width: '385px', border: 1, height: 150, marginLeft: 24, marginTop: 20, marginBottom: 20, padding: 20, outline: '1px solid #E5E4E4', borderRadius: 12 }} />
+                                            <textarea className={cx("text-des")} style={{ resize: 'none', width: '385px', border: 1, height: 150, marginLeft: 24, marginTop: 20, marginBottom: 20, padding: 20, outline: '1px solid #E5E4E4', borderRadius: 12 }} onChange={(e) => setReport(e.target.value)} />
                                             <td className={cx("button-type")}>
-                                                <button type="button" className={cx("button-send")} aria-disabled="false" >Send</button>
+                                                <button type="button" className={cx("button-send")} aria-disabled="false" onClick={() => handleReport()}>Send</button>
                                             </td>
+                                            
                                         </div>
                                     </Popup>
                                 </div>
+                                <div style={{fontSize:15,color:"green", marginLeft:50, marginTop:20}}>{checkReport}</div>
 
                             </table>
                         </form>

@@ -39,6 +39,7 @@ import ReportUser from "../Pages/ReportUser";
 import ViewDetailsUserByAdmin from "../Pages/ViewDetailsUserByAdmin";
 import ListBeatSoldOut from "../Pages/ListBeatSoldOut";
 import Contact from "../Pages/Contact";
+import ListAllUserBan from "../Pages/listAllUserBan";
 const publicRoutes = [
   {
     path: "/",
@@ -67,6 +68,10 @@ const publicRoutes = [
   {
     path: "/listuser",
     component: ListUser,
+  },
+  {
+    path: "/listAllUserBan",
+    component: ListAllUserBan,
   },
   {
     path: "uploadfile",

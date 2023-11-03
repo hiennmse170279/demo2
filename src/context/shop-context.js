@@ -7,8 +7,6 @@ function ShopContextProvider({children}) {
     const [listBeatContext, setListBeatContext] = useState([]);
     const [viewBeatFirstTime, setViewBeatFirstTime] = useState(0);
     const [countCart, setCountCart] = useState(0);
-
-    
     const getDefaultCart = () => {
         console.log(listBeatContext)
         if(!listBeatContext){

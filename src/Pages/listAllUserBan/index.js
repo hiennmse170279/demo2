@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import classNames from "classnames/bind";
 import React, { useContext, useEffect, useMemo } from "react";
 import { useState } from "react";
-import styles from "./ListUser.module.scss";
+import styles from "./listAllUserBan.module.scss";
 import BasicPagination from "../../components/Pagination";
 import PaginationControlled from "../../components/Pagination";
 import ReactPaginate from 'react-paginate';
@@ -15,13 +15,28 @@ const cx = classNames.bind(styles);
 
 // Fake API
 
-function ListUser( ) {
+function ListAllUserBan( ) {
+
+    
+
     const [page, setPage] = useState(1)
     const [pages, setPages] = useState(1)
-    const [listUser, setListUser] = useState();
+    const [listUser, setListUser] = useState([]);
     useEffect(() => { 
-            loadListUser()
+        loadListUserBan()    
     }, [page])
+
+    const loadListUserBan = async() => {
+        await axiosInstance.get("http://localhost:8080/api/v1/admin/user/ban")
+        .then((res) => {
+            setListUser(res.data)
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+    }
+
+
 
     const loadListUser = async () => {
         await axiosInstance.get(`http://localhost:8080/api/v1/admin/${page}/10`)
@@ -45,6 +60,7 @@ function ListUser( ) {
             <h1 className={cx("login-wrapper")}>List User</h1>
             <div className={cx("line")}>
             </div>
+            {listUser.length !== 0 ?
             <div className={cx("listuser-header")}>
                 <thead>
                     <tr>
@@ -55,7 +71,7 @@ function ListUser( ) {
                         <th><span style={{ marginLeft: 170 }}>Role</span></th>
                     </tr>
                 </thead>
-                {listUser ?
+                
                     <tbody className={cx("grid-row")}>
                         {listUser.map((user) => {
                             const dateReleasing = new Date(user.createAt)
@@ -101,7 +117,7 @@ function ListUser( ) {
                             )
                         })}
 
-                    </tbody> : <div> </div>}
+                    </tbody>
                 <div className={cx("pagination-header")} style={{ marginTop: 50 }}>
                     {page > 1 ?
                         <span onClick={() => setPage(page - 1)}><button className={cx('button-pagi')}>Previous</button></span>
@@ -122,9 +138,9 @@ function ListUser( ) {
                         : <span><button className={cx('button-pagi')}>Next</button> </span>
                     }
                 </div>
-            </div>
+            </div>: <div style={{display:"flex", justifyContent:"center", marginBottom:500, fontSize:25}}> There are no user who has banned </div>}
         </div>
     );
 }
 
-export default ListUser;
+export default ListAllUserBan;
